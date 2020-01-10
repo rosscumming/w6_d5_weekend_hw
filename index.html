@@ -4,43 +4,56 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Country Planner</title>
   <meta name="description" content="">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/app.js"></script>
 </head>
 <body>
-  <h1 class="heading">Travplan</h1>
-  <h2 class="subheading">An easy to use planner designed for travellers.</h2>
-  <form id="new-form">
-    <div id="form-wrapper">
-      <div class="form-item">
-        <label for="country">Country</label>
-        <input type="text" id="country" required/>
-      </div>
-      <div class="form-item">
+  <div id="container">
+    <h1 class="heading">Travplan</h1>
+    <h2 class="subheading">An easy to use planner designed for travellers.</h2>
+    <form id="new-form">
+      <div id="form-wrapper">
+        <div class="form-item">
+          <label for="country">Country</label>
+          <input type="text" id="country" required/>
+        </div>
+        <div class="form-item">
 
-        <label for="continent">Contitent</label>
-        <select id="continent">
-          <option value="Select a continent" disabled selected>Select a continent</option>
-          <option value="Europe">Europe</option>
-          <option value="North America">North America</option>
-          <option value="South America">South America</option>
-          <option value="Asia">Asia</option>
-          <option value="Africa">Africa</option>
-          <option value="Australia">Australia</option>
-          <option value="Antarctica">Antarctica</option>
-        </select>
+          <label for="continent">Contitent</label>
+          <select id="continent">
+            <option value="Select a continent" disabled selected>Select a continent</option>
+            <option value="Europe">Europe</option>
+            <option value="North America">North America</option>
+            <option value="South America">South America</option>
+            <option value="Asia">Asia</option>
+            <option value="Africa">Africa</option>
+            <option value="Australia">Australia</option>
+            <option value="Antarctica">Antarctica</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label for="dateOfTravel">Date of travel</label>
+          <input type="text" id="dateOfTravel" required/>
+        </div>
       </div>
+
       <div class="form-item">
-        <label for="dateOfTravel">Date of travel</label>
-        <input type="text" id="dateOfTravel" required/>
+        <label for="paidStatus">Trip paid for?</label>
+          <input class="paymentStatus" type="radio" name="status" value="paid"> Paid</input>
+          <input class="paymentStatus" type="radio" name="status" value="unpaid"> Unpaid</input>
       </div>
+      <button class="save-btn btn" type="submit"><i class="fas fa-save"></i> SAVE</button>
+    </form>
+    <button class="delete-btn btn" type="button" name="delete-all"><i class="fas fa-trash-alt"></i> DELETE ALL TRIPS</button>
+
+    <div id="trips-container">
+      <h1>Planned trips</h1>
+      <ul id="trip-list"></ul>
     </div>
-    <input class="save-btn" type="submit" value="SAVE">
-  </form>
-  <button class="delete-btn" type="button" name="delete-all">DELETE ALL TRIPS</button>
 
-  <h1>Planned trips</h1>
-  <ul id="trip-list"></ul>
+  </div>
 </body>
 </html>

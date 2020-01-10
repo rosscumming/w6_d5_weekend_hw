@@ -21,10 +21,14 @@ const handleFormSubmit = (event) => {
   const newDateOfTravelItem = document.createElement('li')
   newDateOfTravelItem.textContent = `Date of travel: ${event.target.dateOfTravel.value}`
 
+  const newPaymentStatusItem = document.createElement('li')
+      newPaymentStatusItem.textContent = `Trip paid for?: ${event.target.status.value}`
+
   const list = document.querySelector('#trip-list')
   list.appendChild(newCountryItem)
   list.appendChild(newContinentItem)
   list.appendChild(newDateOfTravelItem)
+  list.appendChild(newPaymentStatusItem)
 
   event.target.reset()
 }

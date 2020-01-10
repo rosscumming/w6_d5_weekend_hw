@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -5,5 +7,37 @@
 
 
 body {
-  
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.btn {
+  border: none;
+  background: #5842f4;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  margin: 2px;
+  cursor: pointer;
+  padding: 3px;
+  color: white;
+}
+
+.save-btn {
+  background: #005eff;
+}
+
+.delete-btn {
+  background: 	#ff2200;
+}
+
+.fas {
+  padding: 1px;
+}
+
+button:focus, input[type="button"]:focus {
+    outline: none;
 }
