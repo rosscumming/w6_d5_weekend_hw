@@ -9,7 +9,8 @@
   <script src="js/app.js"></script>
 </head>
 <body>
-  <h1 id="heading">Country Planner</h1>
+  <h1 class="heading">Travplan</h1>
+  <h2 class="subheading">An easy to use planner designed for travellers.</h2>
   <form id="new-form">
     <div id="form-wrapper">
       <div class="form-item">
@@ -17,14 +18,28 @@
         <input type="text" id="country" required/>
       </div>
       <div class="form-item">
+
         <label for="continent">Contitent</label>
-        <input type="text" id="continent" required/>
+        <select id="continent">
+          <option value="Select a continent" disabled selected>Select a continent</option>
+          <option value="Europe">Europe</option>
+          <option value="North America">North America</option>
+          <option value="South America">South America</option>
+          <option value="Asia">Asia</option>
+          <option value="Africa">Africa</option>
+          <option value="Australia">Australia</option>
+          <option value="Antarctica">Antarctica</option>
+        </select>
       </div>
       <div class="form-item">
         <label for="date-of-travel">Date of travel</label>
         <input type="text" id="date-of-travel" required/>
       </div>
     </div>
+    <input type="submit" value="SAVE">
   </form>
+
+  <h1>Planned trips</h1>
+  <ul id="trip-list"></ul>
 </body>
 </html>
