@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-const form = document.querySelector('#new-form')
-form.addEventListener('submit', handleFormSubmit)
+  const form = document.querySelector('#new-form')
+  form.addEventListener('submit', handleFormSubmit)
 
-const deleteButton = document.querySelector('.delete-btn')
-deleteButton.addEventListener('click', handleDeleteButtonOnClick)
+  const deleteButton = document.querySelector('.delete-btn')
+  deleteButton.addEventListener('click', handleDeleteButtonOnClick)
 
 });
 
@@ -22,7 +22,7 @@ const handleFormSubmit = (event) => {
   newDateOfTravelItem.textContent = `Date of travel: ${event.target.dateOfTravel.value}`
 
   const newPaymentStatusItem = document.createElement('li')
-      newPaymentStatusItem.textContent = `Trip paid for?: ${event.target.status.value}`
+  newPaymentStatusItem.textContent = `Trip paid for: ${event.target.status.value}`
 
   const list = document.querySelector('#trip-list')
   list.appendChild(newCountryItem)

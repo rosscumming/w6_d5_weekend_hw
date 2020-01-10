@@ -10,8 +10,18 @@ body {
   font-family: 'Roboto', sans-serif;
   height: 100vh;
   width: 100vw;
+  background: white;
+  overflow: hidden;
 }
 
+
+#container {
+  height: 100vh;
+  margin: 40px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .btn {
   border: none;
@@ -27,7 +37,7 @@ body {
 }
 
 .save-btn {
-  background: #005eff;
+  background: 	#ffa100;
 }
 
 .delete-btn {
@@ -40,4 +50,42 @@ body {
 
 button:focus, input[type="button"]:focus {
     outline: none;
+}
+
+
+.btn-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.form-item {
+  display: flex;
+  justify-content: flex-end;
+  padding: .5em;
+}
+.form-item > label {
+  flex: 1;
+}
+
+.form-item > button {
+ background: grey;
+ color: white;
+ border: 0;
+}
+
+input[type="radio" i] {
+  margin: 0 7px 0 7px;
+}
+
+#form-wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+}
+
+#new-form {
+  width: 400px;
+  margin-bottom: 20px;
 }

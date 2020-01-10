@@ -38,16 +38,21 @@
           <label for="dateOfTravel">Date of travel</label>
           <input type="text" id="dateOfTravel" required/>
         </div>
+        <div class="form-item">
+          <label for="paidStatus">Trip paid for</label>
+          <input class="paymentStatus" type="radio" name="status" value="paid">Paid</input>
+          <input class="paymentStatus" type="radio" name="status" value="unpaid">Unpaid</input>
+        </div>
       </div>
 
-      <div class="form-item">
-        <label for="paidStatus">Trip paid for?</label>
-          <input class="paymentStatus" type="radio" name="status" value="paid"> Paid</input>
-          <input class="paymentStatus" type="radio" name="status" value="unpaid"> Unpaid</input>
+
+
+      <div class="btn-cont">
+        <button class="save-btn btn" type="submit"><i class="fas fa-save"></i> SAVE</button>
+        <button class="delete-btn btn" type="button" name="delete-all"><i class="fas fa-trash-alt"></i> DELETE ALL TRIPS</button>
       </div>
-      <button class="save-btn btn" type="submit"><i class="fas fa-save"></i> SAVE</button>
     </form>
-    <button class="delete-btn btn" type="button" name="delete-all"><i class="fas fa-trash-alt"></i> DELETE ALL TRIPS</button>
+
 
     <div id="trips-container">
       <h1>Planned trips</h1>
