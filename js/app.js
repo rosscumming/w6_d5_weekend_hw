@@ -13,16 +13,16 @@ const handleFormSubmit = (event) => {
   event.preventDefault()
 
   const newCountryItem = document.createElement('li')
-  newCountryItem.textContent = `Country: ${event.target.country.value}`
+  newCountryItem.textContent = event.target.country.value
 
   const newContinentItem = document.createElement('li')
-  newContinentItem.textContent = `Contitent: ${event.target.continent.value}`
+  newContinentItem.textContent = event.target.continent.value
 
   const newDateOfTravelItem = document.createElement('li')
-  newDateOfTravelItem.textContent = `Date of travel: ${event.target.dateOfTravel.value}`
+  newDateOfTravelItem.textContent = event.target.dateOfTravel.value
 
   const newPaymentStatusItem = document.createElement('li')
-  newPaymentStatusItem.textContent = `Trip paid for: ${event.target.status.value}`
+  newPaymentStatusItem.textContent = event.target.status.value
 
   const list = document.querySelector('#trip-list')
   list.appendChild(newCountryItem)

@@ -12,17 +12,17 @@
 </head>
 <body>
   <div id="container">
-    <h1 class="heading">Travplan</h1>
+    <i class="fas fa-plane"></i>
+    <h1 class="heading">travplan</h1>
     <h2 class="subheading">An easy to use planner designed for travellers.</h2>
     <form id="new-form">
       <div id="form-wrapper">
         <div class="form-item">
           <label for="country">Country</label>
-          <input type="text" id="country" required/>
+          <input type="text" id="country" size="22" required/>
         </div>
         <div class="form-item">
-
-          <label for="continent">Contitent</label>
+          <label for="continent">Continent</label>
           <select id="continent">
             <option value="Select a continent" disabled selected>Select a continent</option>
             <option value="Europe">Europe</option>
@@ -35,13 +35,13 @@
           </select>
         </div>
         <div class="form-item">
-          <label for="dateOfTravel">Date of travel</label>
-          <input type="text" id="dateOfTravel" required/>
+          <label for="date-of-travel">Date of travel</label>
+          <input type="text" id="dateOfTravel" size="22" required/>
         </div>
         <div class="form-item">
-          <label for="paidStatus">Trip paid for</label>
-          <input class="paymentStatus" type="radio" name="status" value="paid">Paid</input>
-          <input class="paymentStatus" type="radio" name="status" value="unpaid">Unpaid</input>
+          <label for="paidStatus">Trip paid for?</label>
+          <input class="paymentStatus" type="radio" name="status" value="paid" required>Paid</input>
+          <input class="paymentStatus" type="radio" name="status" value="unpaid" required> Unpaid</input>
         </div>
       </div>
 
@@ -54,8 +54,9 @@
     </form>
 
 
+
+    <h1>Planned trips</h1>
     <div id="trips-container">
-      <h1>Planned trips</h1>
       <ul id="trip-list"></ul>
     </div>
 

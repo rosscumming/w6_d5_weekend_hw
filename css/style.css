@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Galada&display=swap');
 
 * {
   padding: 0;
@@ -21,6 +21,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.heading {
+  font-family: 'Galada', sans-serif;
 }
 
 .btn {
@@ -89,3 +93,11 @@ input[type="radio" i] {
   width: 400px;
   margin-bottom: 20px;
 }
+/*
+#trip-list{
+list-style-type: none;
+background: 	#654dff;
+border-radius: 5px;
+margin-top:10px;
+color: white;
+} */
