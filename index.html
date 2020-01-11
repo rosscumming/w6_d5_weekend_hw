@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,16 +11,16 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/app.js"></script>
 </head>
+
 <body>
   <div id="container">
-    <i class="fas fa-plane"></i>
     <h1 class="heading">travplan</h1>
-    <h2 class="subheading">An easy to use planner designed for travellers.</h2>
+    <p class="subheading">An easy to use planner designed for travellers</p>
     <form id="new-form">
       <div id="form-wrapper">
         <div class="form-item">
           <label for="country">Country</label>
-          <input type="text" id="country" size="22" required/>
+          <input type="text" id="country" size="16" required />
         </div>
         <div class="form-item">
           <label for="continent">Continent</label>
@@ -36,12 +37,12 @@
         </div>
         <div class="form-item">
           <label for="date-of-travel">Date of travel</label>
-          <input type="text" id="dateOfTravel" size="22" required/>
+          <input type="date" id="dateOfTravel" size="16" required />
         </div>
         <div class="form-item">
           <label for="paidStatus">Trip paid for?</label>
-          <input class="paymentStatus" type="radio" name="status" value="paid" required>Paid</input>
-          <input class="paymentStatus" type="radio" name="status" value="unpaid" required> Unpaid</input>
+          <input class="paymentStatus" type="radio" name="status" value="Paid ✔" required>Paid</input>
+          <input class="paymentStatus" type="radio" name="status" value="Unpaid ✖" required> Unpaid</input>
         </div>
       </div>
 
@@ -49,17 +50,21 @@
 
       <div class="btn-cont">
         <button class="save-btn btn" type="submit"><i class="fas fa-save"></i> SAVE</button>
-        <button class="delete-btn btn" type="button" name="delete-all"><i class="fas fa-trash-alt"></i> DELETE ALL TRIPS</button>
+        <button class="delete-btn btn" type="button" name="delete-all"><i class="fas fa-trash-alt"></i> DELETE ALL
+          TRIPS</button>
       </div>
     </form>
 
 
 
-    <h1>Planned trips</h1>
+    <h3>Planned trips</h3>
     <div id="trips-container">
-      <ul id="trip-list"></ul>
+      <ul id="trip-list">
+
+      </ul>
     </div>
 
   </div>
 </body>
+
 </html>

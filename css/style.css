@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Galada&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Elsie|Roboto&display=swap');
 
 * {
   padding: 0;
@@ -10,10 +10,15 @@ body {
   font-family: 'Roboto', sans-serif;
   height: 100vh;
   width: 100vw;
-  background: white;
+  background: #654dff;
   overflow: hidden;
+  color: white;
 }
 
+
+.subheading {
+  margin: 5px 5px 20px 5px;
+}
 
 #container {
   height: 100vh;
@@ -24,7 +29,7 @@ body {
 }
 
 .heading {
-  font-family: 'Galada', sans-serif;
+  font-family: 'Elsie', cursive;
 }
 
 .btn {
@@ -41,19 +46,20 @@ body {
 }
 
 .save-btn {
-  background: 	#ffa100;
+  background: #ffa100;
 }
 
 .delete-btn {
-  background: 	#ff2200;
+  background: #ff2200;
 }
 
 .fas {
   padding: 1px;
 }
 
-button:focus, input[type="button"]:focus {
-    outline: none;
+button:focus,
+input[type="button"]:focus {
+  outline: none;
 }
 
 
@@ -67,17 +73,18 @@ button:focus, input[type="button"]:focus {
   justify-content: flex-end;
   padding: .5em;
 }
-.form-item > label {
+
+.form-item>label {
   flex: 1;
 }
 
-.form-item > button {
- background: grey;
- color: white;
- border: 0;
+.form-item>button {
+  background: grey;
+  color: white;
+  border: 0;
 }
 
-input[type="radio" i] {
+input[type="radio"i] {
   margin: 0 7px 0 7px;
 }
 
@@ -93,11 +100,42 @@ input[type="radio" i] {
   width: 400px;
   margin-bottom: 20px;
 }
-/*
-#trip-list{
-list-style-type: none;
-background: 	#654dff;
-border-radius: 5px;
-margin-top:10px;
-color: white;
-} */
+
+#trips-container {
+  width: 640px;
+  display: flex;
+  flex-direction: row;
+}
+
+#trips-container>* {
+  flex: 1 0;
+}
+
+#trip-list {
+  list-style-type: none;
+  margin-top: 10px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+#itemContainer {
+  margin: 5px;
+  background: #ff4d8e;
+  border-radius: 5px;
+  text-align: center;
+  width: 140px;
+}
+
+.itemStyle {
+  padding: 5px;
+}
+
+.countryItem {
+  padding: 5px;
+  background: black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+}

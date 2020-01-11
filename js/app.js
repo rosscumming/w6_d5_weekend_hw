@@ -1,39 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const form = document.querySelector('#new-form')
-  form.addEventListener('submit', handleFormSubmit)
+  const form = document.querySelector('#new-form');
+  form.addEventListener('submit', handleFormSubmit);
 
-  const deleteButton = document.querySelector('.delete-btn')
-  deleteButton.addEventListener('click', handleDeleteButtonOnClick)
+  const deleteButton = document.querySelector('.delete-btn');
+  deleteButton.addEventListener('click', handleDeleteButtonOnClick);
 
 });
 
 
 const handleFormSubmit = (event) => {
-  event.preventDefault()
+  event.preventDefault();
 
-  const newCountryItem = document.createElement('li')
-  newCountryItem.textContent = event.target.country.value
+  const infoList = document.querySelector('#trip-list')
+  const newList = document.createElement('li')
+  newList.id = 'itemContainer';
 
-  const newContinentItem = document.createElement('li')
-  newContinentItem.textContent = event.target.continent.value
+  const newCountryItem = document.createElement('p');
+  newCountryItem.className = 'countryItem itemStyle';
+  newCountryItem.textContent = event.target.country.value;
 
-  const newDateOfTravelItem = document.createElement('li')
-  newDateOfTravelItem.textContent = event.target.dateOfTravel.value
+  const newContinentItem = document.createElement('p');
+  newContinentItem.className = 'continentItem itemStyle';
+  newContinentItem.textContent = event.target.continent.value;
 
-  const newPaymentStatusItem = document.createElement('li')
-  newPaymentStatusItem.textContent = event.target.status.value
+  const newDateOfTravelItem = document.createElement('p');
+  newDateOfTravelItem.className = 'dataOfTravelItem itemStyle';
+  newDateOfTravelItem.textContent = event.target.dateOfTravel.value;
 
-  const list = document.querySelector('#trip-list')
-  list.appendChild(newCountryItem)
-  list.appendChild(newContinentItem)
-  list.appendChild(newDateOfTravelItem)
-  list.appendChild(newPaymentStatusItem)
+  const newPaymentStatusItem = document.createElement('p');
+  newPaymentStatusItem.className = 'paymentStatusItem itemStyle';
+  newPaymentStatusItem.textContent = event.target.status.value;
 
-  event.target.reset()
-}
+
+  newList.appendChild(newCountryItem);
+  newList.appendChild(newContinentItem);
+  newList.appendChild(newDateOfTravelItem);
+  newList.appendChild(newPaymentStatusItem);
+  infoList.appendChild(newList);
+
+  event.target.reset();
+};
 
 const handleDeleteButtonOnClick = () => {
-  const clearList = document.querySelector('#trip-list')
+  const clearList = document.querySelector('#trip-list');
   clearList.innerHTML = "";
-}
+};
