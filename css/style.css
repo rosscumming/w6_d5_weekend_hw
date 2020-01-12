@@ -1,23 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Elsie|Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Elsie|Roboto&display=swap");
 
 * {
   padding: 0;
   margin: 0;
 }
 
-
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   height: 100vh;
   width: 100vw;
-  background: #654dff;
-  overflow: hidden;
   color: white;
+  background: #1e88e5;
 }
-
 
 .subheading {
   margin: 5px 5px 20px 5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 10px;
+  text-align: center;
+}
+
+input[type="radio"] {
+  color: red;
 }
 
 #container {
@@ -28,13 +33,29 @@ body {
   align-items: center;
 }
 
+#top-wrap {
+  background: RGBA(0, 0, 0, 0.19);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+h3 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+}
+
 .heading {
-  font-family: 'Elsie', cursive;
+  font-family: "Elsie", cursive;
+  text-align: center;
 }
 
 .btn {
   border: none;
-  background: #5842f4;
+  background: #2d8dcb;
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
@@ -46,11 +67,13 @@ body {
 }
 
 .save-btn {
-  background: #ffa100;
+  color: #3c3c3c;
+  background: #fdd835;
 }
 
 .delete-btn {
-  background: #ff2200;
+  color: #3c3c3c;
+  background: #fdd835;
 }
 
 .fas {
@@ -62,23 +85,23 @@ input[type="button"]:focus {
   outline: none;
 }
 
-
 .btn-cont {
   display: flex;
   justify-content: center;
+  margin-top: 5px;
 }
 
 .form-item {
   display: flex;
   justify-content: flex-end;
-  padding: .5em;
+  padding: 0.5em;
 }
 
-.form-item>label {
+.form-item > label {
   flex: 1;
 }
 
-.form-item>button {
+.form-item > button {
   background: grey;
   color: white;
   border: 0;
@@ -98,7 +121,7 @@ input[type="radio"i] {
 
 #new-form {
   width: 400px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #trips-container {
@@ -107,7 +130,7 @@ input[type="radio"i] {
   flex-direction: row;
 }
 
-#trips-container>* {
+#trips-container > * {
   flex: 1 0;
 }
 
@@ -120,13 +143,17 @@ input[type="radio"i] {
   justify-content: center;
 }
 
-
 #itemContainer {
   margin: 5px;
-  background: #ff4d8e;
+  color: #3c3c3c;
+  background: #fdd835;
   border-radius: 5px;
   text-align: center;
   width: 140px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 10px;
+  text-align: center;
 }
 
 .itemStyle {
@@ -135,8 +162,8 @@ input[type="radio"i] {
 
 .countryItem {
   padding: 5px;
-  background: black;
+  color: #3c3c3c;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-
+  border-bottom: 1px solid RGBA(0, 0, 0, 0.19);
 }
